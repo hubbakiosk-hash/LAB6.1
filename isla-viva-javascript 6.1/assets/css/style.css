@@ -1,0 +1,48 @@
+:root { --verde:#176b47; --verde-oscuro:#0d4930; --naranja:#ef7d22; --naranja-oscuro:#cc5f0b; --blanco:#fff; --texto:#26352e; }
+/* Selector universal: integra borde y relleno dentro del ancho total. */
+* { box-sizing:border-box; }
+
+/* Selectores de elemento. */
+body { color:var(--texto); background:var(--blanco); font-family:"Segoe UI",Arial,sans-serif; line-height:1.65; }
+section { scroll-margin-top:5rem; }
+footer { border-top:4px solid var(--naranja); }
+
+/* Selectores de clase para personalizar componentes de Bootstrap. */
+.bg-verde { background-color:var(--verde-oscuro)!important; }
+.text-verde { color:var(--verde-oscuro)!important; }
+.text-bg-naranja { color:#fff!important; background-color:var(--naranja)!important; }
+.border-naranja { border-color:var(--naranja)!important; }
+.letter-spacing { letter-spacing:.13rem; }
+.navbar .nav-link { color:rgba(255,255,255,.82); font-weight:600; }
+.navbar .nav-link:hover,.navbar .nav-link.active { color:#fff; text-decoration:underline; text-decoration-color:var(--naranja); text-underline-offset:.35rem; }
+.hero { min-height:72vh; position:relative; background:linear-gradient(rgba(8,55,36,.72),rgba(8,55,36,.68)),url("../media/imagen.jpg") center/cover no-repeat; }
+.hero-texto { max-width:720px; }
+.encabezado-pagina { background:linear-gradient(120deg,var(--verde-oscuro),var(--verde)); border-bottom:7px solid var(--naranja); }
+.acerca-imagen { width:100%; height:360px; object-fit:cover; }
+.btn-naranja { color:#fff; background:var(--naranja); border-color:var(--naranja); font-weight:700; }
+.btn-naranja:hover,.btn-naranja:focus { color:#fff; background:var(--naranja-oscuro); border-color:var(--naranja-oscuro); }
+.btn-verde { color:#fff; background:var(--verde); border-color:var(--verde); font-weight:700; }
+.btn-verde:hover { color:#fff; background:var(--verde-oscuro); }
+.btn-outline-verde { color:var(--verde); border:2px solid var(--verde); font-weight:700; }
+.btn-outline-verde:hover { color:#fff; background:var(--verde); }
+.tarjeta-proyecto { margin-bottom:1rem; padding:0; border:0; border-top:5px solid var(--naranja); border-radius:.85rem; transition:transform .2s ease,box-shadow .2s ease; overflow:hidden; }
+.tarjeta-proyecto:hover { transform:translateY(-6px); box-shadow:0 .8rem 2rem rgba(13,73,48,.18)!important; }
+.tarjeta-proyecto .card-img-top,.imagen-tematica { height:230px; object-fit:cover; }
+.imagen-tematica.bosque { background:linear-gradient(145deg,#0d4930,#4b9b62 55%,#d4e7bb); }
+.imagen-tematica.costa { background:linear-gradient(145deg,#f7c873,#ef7d22 55%,#1e8ca8); }
+.form-control:focus { border-color:var(--naranja); box-shadow:0 0 0 .25rem rgba(239,125,34,.2); }
+
+/* Selector de ID: aplica estilo únicamente al mensaje de confirmación. */
+#confirmacion { border-left:5px solid var(--verde); font-weight:600; }
+.detalle-hero { min-height:42vh; background:linear-gradient(rgba(13,73,48,.72),rgba(13,73,48,.72)),url("../media/imagen.jpg") center/cover no-repeat; }
+.contenido-detalle { max-width:800px; }
+.tarjeta-laboratorio { border:0; border-top:5px solid var(--naranja); border-radius:.85rem; }
+.salida-codigo { min-height:9rem; padding:1rem; border-radius:.5rem; color:#e9fff3; background:#10291f; white-space:pre-wrap; }
+kbd { color:#fff; background:var(--verde-oscuro); }
+/* Regla responsiva adicional a las clases responsive de Bootstrap. */
+@media (max-width:767.98px) {
+  .hero { min-height:62vh; }
+  .hero h1 { font-size:2.65rem; }
+  .acerca-imagen { height:280px; }
+  .tarjeta-proyecto { margin-bottom:.5rem; }
+}
